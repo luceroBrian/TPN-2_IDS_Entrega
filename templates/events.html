@@ -1,0 +1,168 @@
+{% extends 'base.html' %} 
+
+{% block contenido %} 
+    <div class="contents">
+      <!-- start of content -->
+      <h1>EVENTO</h1>
+      <p>
+        <a href="{{ url_for('register') }}"  >INSCRIPCION</a>
+
+        <a>|</a>
+          
+        <a href="{{ url_for('static', filename='pdf/ciclismo.docx.pdf') }}"  >REGLAMENTO</a>
+        
+        
+      </p>
+
+       <h1>Imagenes Rally MTB</h1>
+         <ul class="articles" >
+                
+        <li> 
+          <a href="#">
+          
+            <img src="{{ url_for('static', filename='images/1.jpeg') }}" width="205" height="150" alt="">
+          </a>
+          <a href="#">
+            <img src="{{ url_for('static', filename='images/4.jpeg') }}"   width="205" height="150" alt="">
+          </a>
+          <a href="#">
+            <img src="{{ url_for('static', filename='images/5.jpeg') }}"   width="205" height="150" alt="">
+          </a>
+          <a href="#">
+            <img src="{{ url_for('static', filename='images/6.jpeg') }}"   width="205" height="150" alt="">
+          </a>
+          
+        </li>
+        
+      </ul>
+
+      <h1>KIT PARA LA CARRERA</h1>
+      <div  class="articles"  >
+        
+        <ul >
+          <li>
+            <h3> INDUMENTARIA:</h3>
+            <p>Anteojos de sol.</p>
+
+            <p>Guantes de ciclista dedos cortos o largos.</p>
+            <p>Calza ciclista acolchada con badana corta y larga.</p>
+            <p>Remera deportiva manga corta.</p>
+            <p>Remera sintética manga larga o térmica.</p>
+            <p>Rompe viento impermeable.</p>
+            <p>Campera liviana y compactable de pluma o sintética.</p>
+            <p>Traje de baño.</p>
+            <p>Buzo micro polar Short deportivo.</p>
+            <p>Pantalón largo deportivo o tipo outdoor.</p>
+            <p>Medias ciclista o deportivas.</p>
+            <p>Ropa interior sintética.</p>
+            <p>Zapatillas deportivas y/o trekking livianas.</p>
+            <p>Suecos tipo crocs o sandalias para mojar.</p>
+            <p>Si llevas mochila, que sea pequeña.</p>
+            <p>Bolsa de hidratación (camelback)</p>
+
+          </li>
+        </ul>
+        <br>
+          <ul  >
+    
+          <li>
+            <h3>ACCESORIOS DE CICLISMO</h3>
+
+          <p>Multi-Herramienta allem</p>
+          <p>Casco de ciclismo</p>
+          <p>Inflador de mano multiválvula</p>
+          <p>Caramañola</p>
+          <p>Cámara de repuesto</p>
+          <p>Cortacadena y eslabones de repuesto</p>
+          <p>Cable candado</p>
+          <p>Kit de reparación para cubiertas</p>
+          <p> Portacelular</p>
+          <p>Portaequipaje</p>
+          <p>Luces de ciclismo trasera y delantera</p>
+          <p>Set de alforjas impermeables Ideal para la mayoría de las rutas</p>
+          <p>Kit de Bikepacking Para circuitos difíciles</p>
+          <p>Trailer para cicloturismo  Para rutas asfaltadas o de ripio consolidado</p>
+          </li>
+
+        </ul>
+        <br>
+        <ul  >
+          <li>
+            <h3> ELEMENTOS DE COCINA:</h3>
+            <p>Taza o jarrito metálico o enlozado.</p>
+            <p>Anafe de Butano (disponible para alquilar).</p>
+            <p>Plato hondo y vaso plástico o metálico.</p>
+            <p>Cuchillo, tenedor, cuchara.</p>
+            <p>Encendedor Cacerola o recipiente pequeño de aluminio.</p>
+            <p>Repasador pequeño Cortapluma.</p>
+          </li>
+          </ul>
+
+          <br>
+
+          <ul >
+          <li>
+            <h3> ELEMENTOS DE COCINA:</h3>
+            <p>Taza o jarrito metálico o enlozado.</p>
+            <p>Anafe de Butano (disponible para alquilar).</p>
+            <p>Plato hondo y vaso plástico o metálico.</p>
+            <p>Cuchillo, tenedor, cuchara.</p>
+            <p>Encendedor Cacerola o recipiente pequeño de aluminio.</p>
+            <p>Repasador pequeño Cortapluma.</p>
+          </li>
+          </ul>  
+
+          <br>
+
+          <ul  >
+          
+
+          <li>
+            <h3>EFECTOS PERSONALES Y DE HIGIENE</h3>
+
+          <p>Kit de primeros auxilios.</p>
+          <p>Analgésicos.</p>
+          <p>Batería portátil para celular (cargada).</p>
+          <p>Toalla de microfibra.</p>
+          <p>Bolsas de residuo (muy útiles en caso de lluvia).</p>
+          <p>Jabón blanco y shampoo.</p>
+          <p>Cepillo y pasta de dientes.</p>
+          <p>Dinero en efectivo, documentación.</p>
+          <p>Protector Solar, protector labial.</p>
+          <p>Papel higiénico o toallitas húmedas.</p>
+          </li>
+
+        </ul>
+        
+        <br>
+         <ul  >
+          <li>
+            <h3> NAVEGACIÓN Y GPS:</h3>
+            <p>Mapa de la zona que vas a explorar</p>
+            <p>Aplicación de navegación por GPS en tu celular</p>
+            <p>Información detallada de la ruta que vas a recorrer</p> 
+          </li>
+          </ul>
+          <br>   
+              
+        </div>
+         <h1>RECORRIDO 80KM</h1>
+          <ul>
+            <li> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101532.88648894087!2d-59.2105144188505!3d-37.32113234303088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911f9b2733946f%3A0xceef2c76899c202d!2sTandil%2C%20Buenos%20Aires%20Province!5e0!3m2!1sen!2sar!4v1759272814793!5m2!1sen!2sar" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+                
+            </li>
+          </ul>
+          <h1>RECORRIDO 30KM</h1>
+          <ul>
+            <li> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101532.88648894087!2d-59.2105144188505!3d-37.32113234303088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911f9b2733946f%3A0xceef2c76899c202d!2sTandil%2C%20Buenos%20Aires%20Province!5e0!3m2!1sen!2sar!4v1759272814793!5m2!1sen!2sar" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+                
+            </li>
+          </ul>
+   
+      <!-- end of section -->
+    </div>
+{% endblock %} 
+ 
+ 

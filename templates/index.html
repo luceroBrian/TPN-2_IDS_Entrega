@@ -1,0 +1,79 @@
+{% extends 'base.html' %} 
+ 
+{% block contenido %}
+<div id="main" >
+    <h2> Imagenes Rally MTB</h2>
+    <div class="featured">
+                <!-- start of featured -->
+                <a href="#">
+                    <img src="{{ url_for('static', filename='images/2.jpeg') }}"  width="270" height="180" alt="">
+                </a>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='images/3.jpeg') }}"  width="270" height="180" alt="">
+                </a> 
+    </div>
+        <!-- end of featured -->
+    <div class="section" >
+                    <!-- srtart of gallery and article section -->
+        <div id="gallery">
+            <h3>Patrocinadores</h3>
+            
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='images/specialized.png') }}"  width="130" height="100" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='images/sram.jpeg') }}" width="130" height="100" alt="">
+                    </a>
+                </li> 
+            </ul>
+
+  
+            <a class="more" href="#">   </a> 
+        </div>
+        <div id="events">
+        <h3>Mapa del recorrido 80KM</h3>
+          <ul>
+            <li> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101532.88648894087!2d-59.2105144188505!3d-37.32113234303088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911f9b2733946f%3A0xceef2c76899c202d!2sTandil%2C%20Buenos%20Aires%20Province!5e0!3m2!1sen!2sar!4v1759272814793!5m2!1sen!2sar" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+                
+            </li>
+          </ul>
+          <h3>Mapa del recorrido 30KM</h3>
+          <ul>
+            <li> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101532.88648894087!2d-59.2105144188505!3d-37.32113234303088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911f9b2733946f%3A0xceef2c76899c202d!2sTandil%2C%20Buenos%20Aires%20Province!5e0!3m2!1sen!2sar!4v1759272814793!5m2!1sen!2sar" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+                
+            </li>
+          </ul>
+       
+          <a class="more" href="#">   </a> 
+        </div>  
+    </div>
+      <!-- end of gallery and article section -->
+</div>
+<div id="sidebar">
+        <!-- start of sidebar -->
+        <ul>
+            <li>
+            <h3><a href="#">Detalles de la carrera: </a></h3>
+            <p>Nombre: {{ diccionario.1["nombre"] }}</p>
+            <p>Organizador: {{ diccionario.1["organizador"] }}</p>
+            <p>Descripcion: {{ diccionario.1["descripcion"] }}</p>
+            <p>Fecha: {{ diccionario.1["fecha"] }}</p>
+            <p>Horario: {{ diccionario.1["horario"] }}</p>
+            <p>lugar: {{ diccionario.1["lugar"] }}</p>
+            <p>Tipo de carera: {{ diccionario.1["tipo_carrera"] }}</p>
+            <p>Carrera: {{ diccionario.1["modalidad_costo"].1["nombre"] }}  ,costo: {{ diccionario.1["modalidad_costo"].1["valor"] }}</p>
+            <p>Carrera: {{ diccionario.1["modalidad_costo"].2["nombre2"] }}  ,costo: {{ diccionario.1["modalidad_costo"].2["valor2"] }}</p>            
+            <p>{{ diccionario.1["nombre"] }}</p>
+            <p>Auspiciantes: {{ diccionario.1["Auspiciantes"][0] }} ,  {{ diccionario.1["Auspiciantes"][1] }}</p>
+            
+            </li> 
+        </ul>
+
+</div> 
+{% endblock %}

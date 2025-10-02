@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+ 
+{% block contenido %}
+    <div class="contents">
+      <h1>REGISTRARME</h1>
+      <div class="registration">
+        <p> Completa el siguiente formulario para poder participar. </p>
+        <form action="{{url_for('/web/contact')}}" method="POST">
+          <table cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td><label>NOMBRE</label></td>
+                <td><input type="text"  name="nombre" value="Nombre" class="txtfield" /></td>
+              </tr>
+              <tr>
+                <td><label>APELLIDO</label></td>
+                <td><input type="text" name="apellido" value="Apellido" class="txtfield" /></td>
+              </tr>
+              <tr>
+                <td><label>EMAIL</label></td>
+                <td><input type="text" name="email" value="Email" class="txtfield" /></td>
+              </tr>
+              <tr>
+                <td><label>CONTRASENA</label></td>
+                <td><input type="password" name="passd" value="Contrasena" class="txtfield" /></td>
+              </tr>
+              <tr>
+                <td><label>CELULAR</label></td>
+                <td><input type="text" name="celular" value="Celular" class="txtfield" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="checkbox" name="carrera_c" class="checkbox" />
+                  <label>CARRERA CORTA</label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="checkbox"name="carrera_l" class="checkbox" />
+                  <label>CARRERA LARGA</label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="submit" value="ENVIAR" class="button" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+{% endblock %}
