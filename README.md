@@ -1,6 +1,6 @@
 #  Trabajo Practico IDS N°2 
 
-# Alumno 
+# - Alumno 
     - Brian David Lucero | 114443
 
 ## Indicaciones
