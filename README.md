@@ -37,7 +37,7 @@ crear carpta :
    - sudo apt install nodejs
 
 
-# - PARA CORRER FLASK SCRIPT
+# - SCRIPT PARA CORRER FLASK 
  #!/bin/bash
  
  sudo apt install python3-pip
