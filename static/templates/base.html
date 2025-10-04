@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="iso-8859-1" />  
+    <title> Club social y Deportivo Unidos por el Deporte </title>
+        
+    <!--<link rel="stylesheet" href="/static/css/styles.css">-->
+    <link rel='stylesheet' href={{url_for('static', filename='/css/styles.css',_external=True)}}> 
+
+</head>
+<body>
+    
+<a href="https://api.whatsapp.com/send?phone=#"   &amp;text= "Me intesesa este articulo..." title="Enviar mensaje directo Whatsapp" target="_blank" class="whatsappLink   aWsp">
+  <img src="{{ url_for('static', filename='images/whatsapp.png') }}" class="wsp    " alt="WhatsApp Chat  ">
+</a>
+  <div id="header">
+        <!-- start of header -->
+        <ul>
+          <li ><a href="{{ url_for('index') }}">INICIO</a></li>  
+          <li ><a href="{{ url_for('events') }}">EVENTO</a></li>   
+          <li ><a href="{{ url_for('contact') }}">CONTACTO</a></li>
+          <li ><a href="{{ url_for('register') }}">INSCRIPCION</a></li> 
+          <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" ></a>
+
+        
+        </ul>
+  </div>
+  <br> 
+<div id="page">
+
+    <!-- end of header -->
+    
+    <div id="body"> 
+        {% block contenido %}
+
+    
+    {% endblock %}
+    </div>
+    
+    <!-- end of body wrapper -->
+</div>
+<div id="footer">
+    <!-- start of footer part -->
+    <div>
+    <ul>
+      <li><a href=" https://www.facebook.com/" target="_blank" class="fb">Facebook</a></li>
+      <li><a href="https://x.com/?lang=en "  target="_blank" class="twitr">Twitter</a></li>
+    </ul>
+    <ul>
+      <li><a  href="{{ url_for('static', filename='pdf/deslinde.pdf') }}"  target="_blank">Deslinde </a></li>
+      <li><a href="{{ url_for('static', filename='pdf/ciclismo.docx.pdf') }}"  target="_blank">Reglamento</a></li>
+    </ul>
+        <span>Copyright &copy; 
+            <a href="#">Club social y Deportivo Unidos por el Deporte</a> 
+        </span> 
+    </div>
+</div>
+<!-- end of footer part -->
+
+
+ 
+   
+    
+</body>
+</html>

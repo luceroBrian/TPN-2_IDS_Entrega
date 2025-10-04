@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+ 
+{% block contenido %}
+    <div class="contents" >
+
+      <div class="registration">
+         <h1>CONTACTANOS</h1>
+        <form action="{{url_for('/web/contact')}}" method="POST">
+          <table >
+            <tbody><tr>
+              <td><input   type="text" value="Nombre" class="txtfield" id="name"  name="Nombre" ></td>
+            </tr>
+            <tr>
+              <td><input   type="text" value="Email" class="txtfield" id="apellido" name="Email"  ></td>
+            </tr>
+            <tr>
+              <td><textarea   value="Mensaje" class="txtfield" id="message"  name="Mensaje">Message</textarea></td>
+            </tr>
+            <tr>
+              <td><input type="submit" value="ENVIAR" class="button"></td>
+            </tr>
+          </tbody></table>
+        </form>
+      </div>
+
+      <!-- start of content -->
+      
+      <br/> 
+      <p>Numero Telefono  : (864) 232-3553</p>
+      <br/>
+      <p>Email : clubsocialdeportivo@gmail.com</p>
+      <br/> 
+      <h1>NUESTRAS REDES SOCIALES</h1> 
+      <br/>
+      <p>Facebook  : clubsocialdeportivo</p>
+      <br/>
+      <p>Twitter : clubsocialdeportivo</p>
+    </div>
+{% endblock %}
