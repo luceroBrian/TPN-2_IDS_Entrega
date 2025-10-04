@@ -1,7 +1,11 @@
 from email.mime.text import MIMEText
-import smtplib
-from flask_mail import Mail, message
+import smtplib 
 from flask import Flask, render_template, redirect, url_for, request
+
+import os
+EMAIL = os.environ.get("EMAIL_USER")
+PASS = os.environ.get("EMAIL_PASS")
+
 
 app = Flask(__name__)
 
@@ -18,7 +22,7 @@ def index():
             "tipo_carrera" : "MTB rural " ,
             "modalidad_costo": {
                 1: {"nombre": "corta" , "valor": "100"},
-                2: {"nombre2": "larga" , "valor2": "200"}
+                2: {"nombre": "larga" , "valor": "200"}
                 },
             "Auspiciantes": ["SRAM","SPECIALIZED"]
 
@@ -30,14 +34,14 @@ def index():
         diccionario=info_evento
     ) 
 
-
-@app.route('/base')
-def base():   
+@app.route('/events')
+def events():   
     return render_template(
-        'base.html',
+        'events.html',
     )
+ 
 
-@app.route('/web/contact', method=["GET", "POST"])
+@app.route('/show/contact', methods=["GET", "POST"])
 def contact():
     if request.method == 'POST':
         Nombre = request.form.get('Nombre')
@@ -46,7 +50,7 @@ def contact():
 
         servidor = smtplib.SMTP("smtp.gmail.com", 587)
         servidor.starttls()
-        servidor.login("lucerobriandavid1@gmail.com" , "Bdl101100")
+        servidor.login("lucerobriandavid1@gmail.com" , "ooevaclvjxfdzqcc")
 
         msg = MIMEText(f"Asunto: {Nombre} \nMensaje> {Mensaje}")
 
@@ -58,19 +62,15 @@ def contact():
 
         servidor.quit()
 
-        return "Mensaje de correo enviado!"
+        return render_template('contact.html')
 
     else:
         return render_template('contact.html')
     
 
-@app.route('/events')
-def events():   
-    return render_template(
-        'events.html',
-    )
 
-@app.route('/web/register',method=["GET", "POST"])
+
+@app.route('/web/register',methods=["GET", "POST"])
 def register():   
     if request.method == 'POST':
         nombre = request.form.get('nombre')
@@ -83,19 +83,20 @@ def register():
 
         servidor = smtplib.SMTP("smtp.gmail.com", 587)
         servidor.starttls()
-        servidor.login("lucerobriandavid1@gmail.com" , "Bdl101100")
+        servidor.login("lucerobriandavid1@gmail.com" , "ooevaclvjxfdzqcc")
 
-        msg = MIMEText(f"Asunto: {nombre} \nMensaje> {mensaje}")
+        
+        msg = MIMEText(f"nombre: {nombre}  \napellido: {apellido} \nemail: {email} \ncontrasena: {passd} \ncelular: {celular} \ncarrera_c: {carrera_c} \ncarrera_l {carrera_l} ")
 
         msg["From"] = "lucerobriandavid1@gmail.com"
         msg["To"] = email
         msg["Subject"] = email
 
-        servidor.sendmail("lucerobriandavid1@gmail.com", Email, msg.as_string*())
+        servidor.sendmail("lucerobriandavid1@gmail.com", email, msg.as_string())
 
         servidor.quit()
      
-        return "Mensaje de correo enviado!"
+        return 'enviado'
 
     else:
         return render_template('register.html')
@@ -103,7 +104,7 @@ def register():
 @app.errorhandler(404)
 def page_not_fount(e):   
     return render_template(
-       '404.html',404
+       '404.html', 404
     )
 
 if __name__ == '__main__':

@@ -5,7 +5,7 @@
 
       <div class="registration">
          <h1>CONTACTANOS</h1>
-        <form action="{{url_for('/web/contact')}}" method="POST">
+        <form action="{{url_for('contact')}}" method="POST">
           <table >
             <tbody><tr>
               <td><input   type="text" value="Nombre" class="txtfield" id="name"  name="Nombre" ></td>
@@ -14,7 +14,7 @@
               <td><input   type="text" value="Email" class="txtfield" id="apellido" name="Email"  ></td>
             </tr>
             <tr>
-              <td><textarea   value="Mensaje" class="txtfield" id="message"  name="Mensaje">Message</textarea></td>
+              <td><textarea  class="txtfield" id="message"  name="Mensaje">Message</textarea></td>
             </tr>
             <tr>
               <td><input type="submit" value="ENVIAR" class="button"></td>
